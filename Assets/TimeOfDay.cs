@@ -13,6 +13,7 @@ public class TimeOfDay : MonoBehaviour
 
     [SerializeField] private int hours = 0;
     [SerializeField] private int minutes = 0;
+    [SerializeField] private bool ShowGUI = false;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +25,7 @@ public class TimeOfDay : MonoBehaviour
 
     private void OnGUI()
     {
+        if (!ShowGUI) return;
         if (GUI.Button(new Rect(0,0,100,30), "Add Hour"))
         {
             hours++;
