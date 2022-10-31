@@ -5,15 +5,22 @@ using UnityEngine;
 
 public class TimeOfDay : MonoBehaviour
 {
-    [SerializeField] private DateTime dt = DateTime.Now;
+    [SerializeField]
+    private DateTime dt = DateTime.Now;
+
     public DateTime GetTime()
     {
         return dt;
     }
 
-    [SerializeField] private int hours = 0;
-    [SerializeField] private int minutes = 0;
-    [SerializeField] private bool ShowGUI = false;
+    [SerializeField]
+    private int hours = 0;
+
+    [SerializeField]
+    private int minutes = 0;
+
+    [SerializeField]
+    private bool ShowGUI = false;
 
     // Update is called once per frame
     void Update()
@@ -25,8 +32,9 @@ public class TimeOfDay : MonoBehaviour
 
     private void OnGUI()
     {
-        if (!ShowGUI) return;
-        if (GUI.Button(new Rect(0,0,100,30), "Add Hour"))
+        if (!ShowGUI)
+            return;
+        if (GUI.Button(new Rect(0, 0, 100, 30), "Add Hour"))
         {
             hours++;
         }

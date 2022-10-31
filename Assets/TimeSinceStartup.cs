@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class TimeSinceStartup : MonoBehaviour
 {
-    [SerializeField] public TMP_Text text;
-    [SerializeField] public TimeOfDay time;
+    [SerializeField]
+    public TMP_Text text;
+
+    [SerializeField]
+    public TimeOfDay time;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void Start() { }
 
     private string Padder(int value, int dp)
     {
         return value.ToString().PadLeft(dp, '0');
     }
+
     // Update is called once per frame
     void Update()
     {
